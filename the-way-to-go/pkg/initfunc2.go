@@ -1,4 +1,4 @@
-package pkgt
+package pkg
 
 import "fmt"
 
