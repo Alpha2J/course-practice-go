@@ -1,6 +1,8 @@
-package arr
+package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 基本语法
 func t1() {
@@ -62,4 +64,9 @@ func TArr() {
 	t1()
 	t2()
 	t3()
+	t4()
+}
+
+func main() {
+	TArr()
 }
