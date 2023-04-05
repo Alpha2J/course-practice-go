@@ -80,6 +80,8 @@ func t4() {
 		fmt.Println("printing slice, i: ", i, " value: ", slice[i])
 	}
 
+	fmt.Println()
+
 	// 缩容: 从slice的第一个元素开始, 一直切到最后一个元素, 然后复制给新的变量slice1
 	// slice 和 slice1的底层数组共享, 只是它们自己的长度和容量回变化
 	var slice1 []int = slice[1:]
@@ -89,13 +91,14 @@ func t4() {
 		fmt.Println("printing slice1, i: ", i, " value: ", slice1[i])
 	}
 
-	//todo 还不知道怎么扩容，指的是，让切片使用完它的相关数组
-	//var arr2 [5]int = [5]int{0, 1, 2, 3, 4}
-	//var slice2 []int = arr2[1:3]
-	//slice2[1] = 4
-	//for i := 0; i < len(slice2); i++ {
-	//	fmt.Println("printing slice2, i: ", i, " value: ", slice2[i])
-	//}
+	fmt.Println()
+
+	// 扩容: 可以将切片扩容到相关数组的终止下标位置, 可以反复扩展, 知道占领整个相关数组
+	var slice2 []int = slice[:len(slice)+2]
+	fmt.Println("len of slice2: ", len(slice2), " cap of slice2: ", cap(slice2))
+	for i := 0; i < len(slice2); i++ {
+		fmt.Println("printing slice2, i: ", i, " value: ", slice2[i])
+	}
 }
 
 // 5. 切片元素赋值及使用
@@ -146,8 +149,8 @@ func main() {
 	//TSlice()
 	//t2()
 	//t3()
-	//t4()
-	t5()
+	t4()
+	//t5()
 	//t6()
 	//t7()
 }
