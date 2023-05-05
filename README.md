@@ -1,2 +1,2 @@
 # course-practice-go
-codes snippets of leaning go lang~
+codes snippets of learning go lang~
