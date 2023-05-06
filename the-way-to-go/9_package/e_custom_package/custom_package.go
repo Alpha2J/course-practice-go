@@ -33,6 +33,8 @@ func t3() {
 // 5. 导入外部安装包:
 //   - go get codesite.ext/author/goExample/goex
 //   - import "github.com/gin-gonic/gin"
+//
+// 可以在这里搜索常用的外部包 https://pkg.go.dev/
 func t4() {
 	// 创建 Gin 引擎
 	r := gin.Default()
