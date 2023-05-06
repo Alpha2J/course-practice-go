@@ -57,8 +57,8 @@ func init() {
 }
 
 func main() {
-	t1()
+	//t1()
 	t2()
-	t3()
+	//t3()
 	//t4()
 }
