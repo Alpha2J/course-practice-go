@@ -1,6 +1,8 @@
 package main
 
 import (
+	//不能在不同的目录内声明同一个package，这样无法import
+	//"cource-practice-go/the-way-to-go/9_package/e_custom_package/duplicatepack1"
 	"cource-practice-go/the-way-to-go/9_package/e_custom_package/pack1"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -50,7 +52,14 @@ func t4() {
 	r.Run(":19923")
 }
 
-// 6. 程序的执行:
+// 6. 包名和目录名不同的时候，import的时候还是使用目录名，但是使用包内关键字的时候是需要用包名来调用
+// ps: 在Go语言中，包的导入路径通常与包的名称相同，这是Go语言的一种约定.
+func t5() {
+	//代码能正常跑，但是ide报红，不清楚原因，先注释了
+	//fmt.Println(pack5_diff.Pack5Int)
+}
+
+// 7. 程序的执行:
 //   - 执行导入包的init()函数
 //   - 执行main 包的init()函数
 //   - 执行main()代码
@@ -62,5 +71,6 @@ func main() {
 	//t1()
 	//t2()
 	t3()
-	t4()
+	//t4()
+	t5()
 }
