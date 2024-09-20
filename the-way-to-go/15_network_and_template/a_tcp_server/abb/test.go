@@ -1,0 +1,5 @@
+package abc
+
+func hello() {
+
+}
