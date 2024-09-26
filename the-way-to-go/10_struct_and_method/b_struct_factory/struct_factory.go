@@ -7,7 +7,7 @@ type File struct {
 	name string
 }
 
-// 1. 按惯例，工厂的名字以 new 或 New 开头
+// NewFile 1. 按惯例，工厂的名字以 new 或 New 开头
 func NewFile(fd int, name string) *File {
 	if fd < 0 {
 		return nil
@@ -28,9 +28,9 @@ func t2() {
 
 // 3. map和struct vs new()和make()
 // https://learnku.com/docs/the-way-to-go/72-slice/3613#9b53a0
-//试图 make() 一个结构体变量，会引发一个编译错误，这还不是太糟糕，
-//但是 new() 一个映射并试图使用数据填充它，将会引发运行时错误！
-//因为 new(Foo) 返回的是一个指向 nil 的指针，它尚未被分配内存。所以在使用 map 时要特别谨慎。
+// 试图 make() 一个结构体变量，会引发一个编译错误，这还不是太糟糕，
+// 但是 new() 一个映射并试图使用数据填充它，将会引发运行时错误！
+// 因为 new(Foo) 返回的是一个指向 nil 的指针，它尚未被分配内存。所以在使用 map 时要特别谨慎。
 func t3() {
 	//package main
 	//
