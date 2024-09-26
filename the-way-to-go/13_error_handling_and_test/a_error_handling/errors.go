@@ -33,6 +33,7 @@ func t3() {
 	if _, err := Sqrt(-1); err != nil {
 		fmt.Printf("Error: %s\n", err)
 	}
+
 }
 
 // todo
