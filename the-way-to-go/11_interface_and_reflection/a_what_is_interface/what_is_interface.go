@@ -80,8 +80,15 @@ func t3() {
 	fmt.Println("read ok? : ", ok)
 }
 
+// 5. 接口类型变量的初始值是 nil
+func t4() {
+	var i1 Interface1
+	fmt.Println("is i1 equals nil: ", i1 == nil)
+}
+
 func main() {
 	//t1()
 	//t2()
-	t3()
+	//t3()
+	t4()
 }
